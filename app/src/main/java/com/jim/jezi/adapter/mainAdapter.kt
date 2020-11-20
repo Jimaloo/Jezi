@@ -20,7 +20,7 @@ class mainAdapter(private val exampleList:List<Product>):RecyclerView.Adapter<ma
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
         val currentItem = exampleList[position]
-        holder.name.text = currentItem.name
+
         holder.description.text = currentItem.description
         holder.price.text = currentItem.price
         holder.imageurl.text = currentItem.ImageUrl
@@ -30,7 +30,7 @@ class mainAdapter(private val exampleList:List<Product>):RecyclerView.Adapter<ma
     override fun getItemCount() =  exampleList.size
 
     class MainViewHolder(itemView : View):RecyclerView.ViewHolder(itemView){
-        val name: TextView = itemView.findViewById(R.id.name)
+
         val price:TextView = itemView.findViewById(R.id.price)
         val description:TextView = itemView.findViewById(R.id.description)
         val imageurl:TextView = itemView.findViewById(R.id.imageurl)
