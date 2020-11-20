@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="8dp"
-    android:background="#33D3D3D3">
+    android:background="#F2dad0d7"
+    android:padding="8dp">
 
     <TextView
         android:id="@+id/price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/barlow_regular"
-        android:text="KES 1500.00"
+        android:layout_marginStart="18dp"
+        android:fontFamily="@font/barlow_semibold"
+        android:text="KES 1,500.00"
         android:textColor="#B02B2B"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +23,7 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="6dp"
         android:fontFamily="@font/barlow_semibold"
         android:text="Nike F.C. Women's Tie-Dye Football Shirt"
         android:textColor="#000000"
@@ -38,7 +36,7 @@
         android:id="@+id/description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="6dp"
         android:fontFamily="@font/barlow_regular"
         android:text="The Nike F.C. Shirt blends 2 summer favourites: festivals and football. Soft, sweat-wicking fabric and a mesh racerback help you stay comfortable on the pitch or in the crowd."
         android:textSize="20sp"
@@ -46,16 +44,43 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
-    <Button
+    <com.skydoves.powerspinner.PowerSpinnerView
+        android:layout_width="151dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:hint="Question 1"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/white"
+        android:textSize="14.5sp"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        app:spinner_arrow_gravity="end"
+        app:spinner_arrow_padding="8dp"
+        app:spinner_divider_color="@color/white"
+        app:spinner_divider_show="true"
+        app:spinner_divider_size="0.4dp"
+        app:spinner_item_array="@array/questions"
+        app:spinner_popup_animation="dropdown"
+        app:spinner_popup_background="@color/white"
+        app:spinner_popup_elevation="14dp" />
+
+    <ImageButton
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/add"
+        android:background="@drawable/ic_add"
         android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description" />
-     />
+        app:layout_constraintTop_toBottomOf="@+id/description" /><![CDATA[
 
+    />
+
+]]>
 </androidx.constraintlayout.widget.ConstraintLayout>

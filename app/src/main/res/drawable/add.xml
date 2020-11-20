@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape
+<selector
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <solid
-        android:color="#000000"
+    <item
+android:drawable="@color/black"
         />
-    <size android:height="40dp"
-        android:width="50dp"/>
 
-</shape>
+</selector>
