@@ -10,10 +10,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.jim.jezi.Model.Product
 import com.jim.jezi.R
 
-class mainAdapter(private val exampleList:List<Product>):RecyclerView.Adapter<mainAdapter.MainViewHolder>() {
+class mainAdapter(
+    private val exampleList: List<Product>,
+    private val listActivity: onItemClickListener
+) : RecyclerView.Adapter<mainAdapter.MainViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.singlecard,parent,false)
+        val itemView =
+            LayoutInflater.from(parent.context).inflate(R.layout.singlecard, parent, false)
         return MainViewHolder(itemView)
     }
 
@@ -27,13 +31,26 @@ class mainAdapter(private val exampleList:List<Product>):RecyclerView.Adapter<ma
     }
 
 
-    override fun getItemCount() =  exampleList.size
+    override fun getItemCount() = exampleList.size
 
-    class MainViewHolder(itemView : View):RecyclerView.ViewHolder(itemView){
+    inner class MainViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
+        View.OnClickListener {
 
-        val price:TextView = itemView.findViewById(R.id.price)
-        val description:TextView = itemView.findViewById(R.id.description)
-        val imageurl:TextView = itemView.findViewById(R.id.imageurl)
 
+        val price: TextView = itemView.findViewById(R.id.price)
+        val description: TextView = itemView.findViewById(R.id.description)
+        val imageurl: TextView = itemView.findViewById(R.id.imageurl)
+
+        init {
+            itemView.setOnClickListener(this)
         }
+
+        override fun onClick(p0: View?) {
+            listActivity.onItemClicked()
+        }
+    }
+
+    interface onItemClickListener {
+        fun onItemClicked()
+    }
 }
