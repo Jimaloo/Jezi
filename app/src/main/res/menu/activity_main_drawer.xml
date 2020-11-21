@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single" >
+        <item android:id="@+id/home"
+            android:title="Home"
+            android:icon="@drawable/ic_homeicon"/>
+
+        <item android:id="@+id/account_settings"
+            android:title="Account Settings"
+            android:icon="@drawable/ic_accounticon" />
+
+        <item android:id="@+id/my_wishlist"
+            android:title="My Wishlist"
+            android:icon="@drawable/ic_wishlisticon"/>
+
+        <item android:id="@+id/orders"
+            android:title="Orders"
+            android:icon="@drawable/ic_ordersicon"/>
+
+        <item android:id="@+id/support"
+            android:title="Support"
+            android:icon="@drawable/ic_supporticon" />
+    </group>
+    <group
+        android:checkableBehavior="single">
+        <item android:id="@+id/logout"
+            android:title="Log Out"
+            />
+    </group>
+</menu>
