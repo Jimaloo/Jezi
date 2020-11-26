@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F2F2F2"
-    android:padding="16dp"
-
+    android:orientation="vertical"
     tools:context=".Checkout">
-
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#F2F2F2"
+    android:padding="16dp">
     <include
         android:id="@+id/include2"
         layout="@layout/checkout_toolbar"
@@ -49,7 +51,7 @@
             android:button="@drawable/custom_radiobutton"
             android:fontFamily="@font/barlow_regular"
             android:onClick="onRadioButtonClicked"
-            android:padding="10dp"
+            android:padding="5dp"
             android:text="M-Pesa"
             android:textSize="15sp" />
 
@@ -62,7 +64,7 @@
             android:button="@drawable/custom_radiobutton"
             android:fontFamily="@font/barlow_regular"
             android:onClick="onRadioButtonClicked"
-            android:padding="10dp"
+            android:padding="5dp"
             android:text="Debit/Credit card"
             android:textSize="15sp" />
 
@@ -73,10 +75,9 @@
             android:layout_marginBottom="5dp"
             android:background="#FFFFFF"
             android:button="@drawable/custom_radiobutton"
-            android:drawablePadding="10dp"
             android:fontFamily="@font/barlow_regular"
             android:onClick="onRadioButtonClicked"
-            android:padding="10dp"
+            android:padding="5dp"
             android:text="Cash on Delivery"
             android:textSize="15sp" />
     </RadioGroup>
@@ -96,7 +97,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/shipping"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="18dp"
         android:background="#FFFFFF"
         android:ems="10"
         android:fontFamily="@font/barlow_medium"
@@ -107,7 +108,7 @@
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/couponTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editTextTextPostalAddress"
@@ -116,5 +117,94 @@
         android:text="Coupon"
         android:textSize="20sp" />
 
+    <EditText
+        android:id="@+id/couponCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/couponTitle"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:fontFamily="@font/barlow_medium"
+        android:textSize="20sp"
+        android:padding="12dp"
+        android:hint="Enter Coupon code"
+        android:background="#FFFFFF"
+        android:inputType="textPersonName"
+
+         />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="51dp"
+        android:layout_alignTop="@+id/couponCode"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="75dp"
+        android:layout_toEndOf="@+id/couponCode"
+        app:srcCompat="@drawable/ic_coupon" />
+
 
 </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/deliveryFee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/barlow_medium"
+            android:textSize="18sp"
+            android:layout_marginTop="23dp"
+            android:text="Delivery Fee" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/barlow_medium"
+            android:textSize="18sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="23dp"
+            android:text="KES 300.00" />
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/deliveryFee"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/barlow_medium"
+            android:text="Total"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/totalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/price"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/barlow_medium"
+            android:text="KES 1800.00"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/ic_checkout" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
