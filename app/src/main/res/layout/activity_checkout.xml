@@ -6,149 +6,162 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Checkout">
-<RelativeLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="#F2F2F2"
-    android:padding="16dp">
-    <include
-        android:id="@+id/include2"
-        layout="@layout/checkout_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp" />
 
-    <TextView
-        android:id="@+id/textView"
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/include2"
-        android:layout_marginTop="33dp"
-        android:fontFamily="@font/barlow_semibold"
-        android:text="Payment Method"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/include2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include2" />
+        android:layout_height="561dp"
+        android:background="#F2F2F2"
+        android:padding="16dp">
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
-
-        <RadioButton
-            android:id="@+id/mpesa"
+        <include
+            android:id="@+id/include2"
+            layout="@layout/checkout_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:background="#FFFFFF"
-            android:button="@drawable/custom_radiobutton"
-            android:fontFamily="@font/barlow_regular"
-            android:onClick="onRadioButtonClicked"
-            android:padding="5dp"
-            android:text="M-Pesa"
-            android:textSize="15sp" />
+            android:layout_marginTop="20dp" />
 
-        <RadioButton
-            android:id="@+id/card"
+        <TextView
+            android:id="@+id/checkoutTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/include2"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/barlow_semibold"
+            android:text="Checkout"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            app:layout_constraintTop_toBottomOf="@+id/include2" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkoutTitle"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/barlow_medium"
+            android:text="Payment Method"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:background="#FFFFFF"
-            android:button="@drawable/custom_radiobutton"
-            android:fontFamily="@font/barlow_regular"
-            android:onClick="onRadioButtonClicked"
-            android:padding="5dp"
-            android:text="Debit/Credit card"
-            android:textSize="15sp" />
+            android:layout_below="@+id/textView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="2dp"
 
-        <RadioButton
-            android:id="@+id/cash"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <RadioButton
+                android:id="@+id/mpesa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="#FFFFFF"
+                android:layout_gravity="right|center_vertical"
+                android:button="@drawable/custom_radiobutton"
+                android:fontFamily="@font/barlow_regular"
+                android:onClick="onRadioButtonClicked"
+                android:padding="5dp"
+                android:text="M-Pesa"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="#FFFFFF"
+                android:button="@drawable/custom_radiobutton"
+                android:fontFamily="@font/barlow_regular"
+                android:onClick="onRadioButtonClicked"
+                android:padding="5dp"
+                android:text="Debit/Credit card"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/cash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="#FFFFFF"
+                android:button="@drawable/custom_radiobutton"
+                android:fontFamily="@font/barlow_regular"
+                android:onClick="onRadioButtonClicked"
+                android:padding="5dp"
+                android:text="Cash on Delivery"
+                android:textSize="15sp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/shipping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioGroup"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/barlow_medium"
+            android:text="Shipping Address"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/editTextTextPostalAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
+            android:layout_below="@+id/shipping"
+            android:layout_marginTop="18dp"
             android:background="#FFFFFF"
-            android:button="@drawable/custom_radiobutton"
+            android:ems="10"
             android:fontFamily="@font/barlow_regular"
-            android:onClick="onRadioButtonClicked"
-            android:padding="5dp"
-            android:text="Cash on Delivery"
-            android:textSize="15sp" />
-    </RadioGroup>
+            android:hint="Enter Address"
+            android:inputType="textPostalAddress"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/shipping"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/radioGroup"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/barlow_semibold"
-        android:text="Shipping Address"
-        android:textSize="20sp" />
+        <TextView
+            android:id="@+id/couponTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextTextPostalAddress"
+            android:layout_marginTop="22dp"
+            android:fontFamily="@font/barlow_medium"
+            android:text="Coupon"
+            android:textSize="20sp" />
 
-    <EditText
-        android:id="@+id/editTextTextPostalAddress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/shipping"
-        android:layout_marginTop="18dp"
-        android:background="#FFFFFF"
-        android:ems="10"
-        android:fontFamily="@font/barlow_medium"
-        android:hint="Enter Address"
-        android:inputType="textPostalAddress"
-        android:padding="10dp"
-        android:textColor="#000000"
-        android:textSize="20sp" />
+        <EditText
+            android:id="@+id/couponCode"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/couponTitle"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            android:ems="10"
+            android:fontFamily="@font/barlow_regular"
+            android:hint="Enter Coupon code"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:textSize="20sp"
 
-    <TextView
-        android:id="@+id/couponTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editTextTextPostalAddress"
-        android:layout_marginTop="22dp"
-        android:fontFamily="@font/barlow_semibold"
-        android:text="Coupon"
-        android:textSize="20sp" />
+            />
 
-    <EditText
-        android:id="@+id/couponCode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/couponTitle"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:fontFamily="@font/barlow_medium"
-        android:textSize="20sp"
-        android:padding="12dp"
-        android:hint="Enter Coupon code"
-        android:background="#FFFFFF"
-        android:inputType="textPersonName"
-
-         />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="51dp"
-        android:layout_alignTop="@+id/couponCode"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="75dp"
-        android:layout_toEndOf="@+id/couponCode"
-        app:srcCompat="@drawable/ic_coupon" />
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="68dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/couponCode"
+            android:layout_marginStart="-10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toEndOf="@+id/couponCode"
+            app:srcCompat="@drawable/ic_coupon" />
 
 
-</RelativeLayout>
+    </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:padding="16dp">
 
         <TextView
@@ -156,21 +169,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
             android:fontFamily="@font/barlow_medium"
-            android:textSize="18sp"
-            android:layout_marginTop="23dp"
-            android:text="Delivery Fee" />
+            android:text="Delivery Fee"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/barlow_medium"
-            android:textSize="18sp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="23dp"
-            android:text="KES 300.00" />
+            android:layout_marginTop="0dp"
+            android:fontFamily="@font/barlow_medium"
+            android:text="KES 300.00"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/total"

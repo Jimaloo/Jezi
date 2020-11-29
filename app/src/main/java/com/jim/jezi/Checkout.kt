@@ -3,12 +3,21 @@ package com.jim.jezi
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageButton
 import android.widget.RadioButton
+import androidx.fragment.app.FragmentManager
 
 class Checkout : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_checkout)
+
+        val sheet = findViewById<ImageButton>(R.id.imageButton)
+        sheet.setOnClickListener{
+            val bottomSheet = BotttomSheet()
+            bottomSheet.show(supportFragmentManager,"TAG")
+
+        }
     }
 
     fun onRadioButtonClicked(view: View){
@@ -32,4 +41,5 @@ class Checkout : AppCompatActivity() {
             }
 
     }
+
 }

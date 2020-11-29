@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "903865471229",
+    "firebase_url": "https://jezi-8997a.firebaseio.com",
+    "project_id": "jezi-8997a",
+    "storage_bucket": "jezi-8997a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:903865471229:android:1c3131a3fb3d6a024fae94",
+        "android_client_info": {
+          "package_name": "com.jim.jezi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "903865471229-9r5nkf5lkfv2ddvlauot0ak66mdtdf8r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jim.jezi",
+            "certificate_hash": "7d8179f2dcb8bb03b285f64a776124cc93e5b5ce"
+          }
+        },
+        {
+          "client_id": "903865471229-ihe4tscuc83pbrbfss2nltrbd9uavk6d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqRs2v8Q5jy-nbXgdOkOytFq_h5y6Ypyg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "903865471229-ihe4tscuc83pbrbfss2nltrbd9uavk6d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
