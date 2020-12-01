@@ -9,21 +9,20 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="79dp"
-        android:layout_height="82dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.499"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@drawable/profile"/> />
 
     <TextView
         android:id="@+id/Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:fontFamily="@font/barlow_semibold"
+        android:fontFamily="@font/barlow_medium"
         android:text="Jim Aloo"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -51,7 +50,7 @@
         android:id="@+id/close"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"

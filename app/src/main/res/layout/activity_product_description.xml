@@ -23,6 +23,7 @@
         android:layout_marginBottom="-3dp" />
 
     <ImageView
+        android:id="@+id/cart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"

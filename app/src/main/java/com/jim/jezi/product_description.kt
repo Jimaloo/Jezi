@@ -9,6 +9,8 @@ import android.widget.Spinner
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
+import butterknife.InjectView
+import butterknife.OnClick
 
 class product_description : AppCompatActivity() {
 
@@ -33,10 +35,18 @@ class product_description : AppCompatActivity() {
 
         val back = findViewById<ImageView>(R.id.backBtn)
         back.setOnClickListener(View.OnClickListener { onBackPressed() })
+
+
+        val cart = findViewById<ImageView>(R.id.cart)
+        cart.setOnClickListener(View.OnClickListener {
+            val cartFragment = Cart()
+            cartFragment.show(supportFragmentManager,"TAG")
+        })
     }
 
     fun addClicked(view: View) {
         val go = Intent(this@product_description, Checkout::class.java)
         startActivity(go)
     }
+
 }
