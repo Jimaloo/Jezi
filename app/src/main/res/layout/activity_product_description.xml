@@ -32,6 +32,8 @@
         android:layout_marginEnd="19dp"
         android:src="@drawable/ic_bag" />
 
+
+
     <ImageView
         android:id="@+id/likeBtn"
         android:layout_width="wrap_content"

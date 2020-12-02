@@ -8,9 +8,10 @@ import android.view.ViewGroup
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import butterknife.ButterKnife
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.tabs.TabLayout
 
-class Search : Fragment() {
+class Search : BottomSheetDialogFragment() {
     lateinit var tabLayout: TabLayout
     private lateinit var demoCollectionAdapter: DemoCollectionAdapter
     private lateinit var viewPager: ViewPager2

@@ -2,45 +2,46 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#F2F2F2"
     android:name="com.jim.jezi.Cart"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F2F2F2"
     android:orientation="vertical"
     tools:context=".Cart">
 
     <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="15dp"
+        android:id="@+id/closeCart"
+        android:layout_width="wrap_content"
         android:layout_height="20dp"
         android:layout_gravity="end"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"
         android:background="#F2F2F2"
         android:src="@drawable/ic_close" />
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Cart"
-    android:textSize="25sp"
-    android:layout_marginStart="20dp"
-    android:fontFamily="@font/barlow_medium"
-    android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/barlow_medium"
+        android:text="Cart"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
+        android:layout_weight="1"
         app:layoutManager="LinearLayoutManager"
         tools:listitem="@layout/fragment_cart" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="2.5"
+        android:layout_weight="3"
         android:background="#FFFFFF"
         android:orientation="horizontal">
 
@@ -51,11 +52,11 @@
             android:layout_above="@+id/checkout"
             android:layout_alignParentStart="true"
             android:layout_marginStart="41dp"
-            android:layout_marginBottom="10dp"
+
             android:fontFamily="@font/barlow_medium"
             android:text="Total"
             android:textColor="@color/black"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/price"
@@ -64,11 +65,11 @@
             android:layout_above="@+id/checkout"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="30dp"
-            android:layout_marginBottom="10dp"
-            android:fontFamily="@font/barlow_medium"
+
+            android:fontFamily="@font/barlow_regular"
             android:text="Kes 1,800.00"
             android:textColor="@color/black"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
         <ImageButton
             android:id="@+id/checkout"
@@ -78,4 +79,6 @@
             android:layout_margin="15dp"
             android:background="@drawable/ic_checkout" />
     </RelativeLayout>
+
+
 </LinearLayout>

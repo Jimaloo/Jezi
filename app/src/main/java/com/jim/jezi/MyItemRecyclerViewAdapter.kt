@@ -27,12 +27,10 @@ class MyItemRecyclerViewAdapter(
 
     override fun getItemCount(): Int = values.size
 
-    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val title = view.findViewById<TextView>(R.id.title)
-        val price = view.findViewById<TextView>(R.id.price)
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val title:TextView = itemView.findViewById(R.id.title)
+        val price:TextView = itemView.findViewById(R.id.price)
 
-        override fun toString(): String {
-            return super.toString() + " '"
-        }
+
     }
 }
