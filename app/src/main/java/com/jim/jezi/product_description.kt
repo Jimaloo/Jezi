@@ -3,6 +3,7 @@ package com.jim.jezi
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.Spinner
@@ -19,19 +20,15 @@ class product_description : AppCompatActivity() {
         setContentView(R.layout.activity_product_description)
 
         val spinner = findViewById<Spinner>(R.id.spinner)
-        val spinnerArray = ArrayList<String>()
-        spinner.setPrompt("Pick size")
-        spinnerArray.add("XS UK(4-6) >")
-        spinnerArray.add("XS US(4-6)")
-        spinnerArray.add("XS UAE(4-6)")
-        spinnerArray.add("XS KE(4-6)")
-        spinnerArray.add("XS FR(4-6)")
+        spinner.onItemSelectedListener = object :AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(p0: AdapterView<*>?) {
 
-        val spinnerAdapter = ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,spinnerArray)
-        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spinner.setAdapter(spinnerAdapter)
+            }
 
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
 
+            }
+        }
 
         val back = findViewById<ImageView>(R.id.backBtn)
         back.setOnClickListener(View.OnClickListener { onBackPressed() })
