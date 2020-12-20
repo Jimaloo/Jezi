@@ -3,10 +3,7 @@ package com.jim.jezi
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.ImageView
-import android.widget.Spinner
+import android.widget.*
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -39,6 +36,15 @@ class product_description : AppCompatActivity() {
             val cartFragment = Cart()
             cartFragment.show(supportFragmentManager,"TAG")
         })
+
+
+        val addTobag = findViewById<ImageButton>(R.id.addToBag)
+        addTobag.setOnClickListener(View.OnClickListener {
+            val dot = findViewById<View>(R.id.dot)
+
+            dot.visibility = View.VISIBLE
+        })
+
     }
 
     fun addClicked(view: View) {
